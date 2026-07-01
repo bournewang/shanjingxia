@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>单景霞案录音证据</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f5f1e8;
+      --surface: rgba(255, 255, 255, 0.82);
+      --text: #1e2925;
+      --muted: #66716c;
+      --accent: #23634d;
+      --accent-hover: #194b3a;
+      --border: #d9ddd8;
+      --shadow: 0 14px 36px rgba(42, 52, 47, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(244, 196, 126, 0.24), transparent 34rem),
+        var(--background);
+      color: var(--text);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: clamp(48px, 9vw, 92px) 0 64px;
+    }
+
+    header { margin-bottom: 30px; }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .audio-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .audio-item {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .file-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      align-items: center;
+      gap: 10px;
+      padding: 16px;
+    }
+
+    .file-name {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      font-size: 1rem;
+      font-weight: 650;
+    }
+
+    button,
+    .download {
+      min-height: 44px;
+      border-radius: 11px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    .play {
+      min-width: 78px;
+      padding: 10px 16px;
+      border: 0;
+      background: var(--accent);
+      color: white;
+    }
+
+    .play:hover { background: var(--accent-hover); }
+
+    .download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    button:focus-visible,
+    .download:focus-visible {
+      outline: 3px solid rgba(35, 99, 77, 0.3);
+      outline-offset: 3px;
+    }
+
+    .player-wrap {
+      display: none;
+      padding: 0 16px 16px;
+    }
+
+    .audio-item.active .player-wrap { display: block; }
+
+    audio {
+      display: block;
+      width: 100%;
+      height: 48px;
+    }
+
+    @media (max-width: 560px) {
+      main { width: min(100% - 24px, 760px); }
+
+      .file-row {
+        grid-template-columns: 1fr 1fr;
+        padding: 14px;
+      }
+
+      .file-name {
+        grid-column: 1 / -1;
+        padding: 2px 2px 4px;
+      }
+
+      .play,
+      .download { width: 100%; }
+
+      .player-wrap { padding: 0 14px 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>单景霞案录音证据</h1>
+      <p class="subtitle">共 7 条录音 · 点击播放或下载文件</p>
+    </header>
+
+    <ul class="audio-list">
+
+      <li class="audio-item">
+        <div class="file-row">
+          <span class="file-name">单景霞2025-8-3.m4a</span>
+          <button class="play" type="button" aria-expanded="false">播放</button>
+          <a class="download" href="单景霞2025-8-3.m4a?download=1" download="单景霞2025-8-3.m4a">下载</a>
+        </div>
+        <div class="player-wrap">
+          <audio controls preload="metadata" src="单景霞2025-8-3.m4a"></audio>
+        </div>
+      </li>
+
+      <li class="audio-item">
+        <div class="file-row">
+          <span class="file-name">单景霞2025-8-13.m4a</span>
+          <button class="play" type="button" aria-expanded="false">播放</button>
+          <a class="download" href="单景霞2025-8-13.m4a?download=1" download="单景霞2025-8-13.m4a">下载</a>
+        </div>
+        <div class="player-wrap">
+          <audio controls preload="metadata" src="单景霞2025-8-13.m4a"></audio>
+        </div>
+      </li>
+
+      <li class="audio-item">
+        <div class="file-row">
+          <span class="file-name">单景霞2025-9-6-b.m4a</span>
+          <button class="play" type="button" aria-expanded="false">播放</button>
+          <a class="download" href="单景霞2025-9-6-b.m4a?download=1" download="单景霞2025-9-6-b.m4a">下载</a>
+        </div>
+        <div class="player-wrap">
+          <audio controls preload="metadata" src="单景霞2025-9-6-b.m4a"></audio>
+        </div>
+      </li>
+
+      <li class="audio-item">
+        <div class="file-row">
+          <span class="file-name">单景霞2025-9-6-a.m4a</span>
+          <button class="play" type="button" aria-expanded="false">播放</button>
+          <a class="download" href="单景霞2025-9-6-a.m4a?download=1" download="单景霞2025-9-6-a.m4a">下载</a>
+        </div>
+        <div class="player-wrap">
+          <audio controls preload="metadata" src="单景霞2025-9-6-a.m4a"></audio>
+        </div>
+      </li>
+
+      <li class="audio-item">
+        <div class="file-row">
+          <span class="file-name">王宜春2026-2-2.WAV</span>
+          <button class="play" type="button" aria-expanded="false">播放</button>
+          <a class="download" href="王宜春2026-2-2.WAV?download=1" download="王宜春2026-2-2.WAV">下载</a>
+        </div>
+        <div class="player-wrap">
+          <audio controls preload="metadata" src="王宜春2026-2-2.WAV"></audio>
+        </div>
+      </li>
+
+      <li class="audio-item">
+        <div class="file-row">
+          <span class="file-name">单景霞2026-2-2.WAV</span>
+          <button class="play" type="button" aria-expanded="false">播放</button>
+          <a class="download" href="单景霞2026-2-2.WAV?download=1" download="单景霞2026-2-2.WAV">下载</a>
+        </div>
+        <div class="player-wrap">
+          <audio controls preload="metadata" src="单景霞2026-2-2.WAV"></audio>
+        </div>
+      </li>
+
+      <li class="audio-item">
+        <div class="file-row">
+          <span class="file-name">栾检2026-4-1.m4a</span>
+          <button class="play" type="button" aria-expanded="false">播放</button>
+          <a class="download" href="栾检2026-4-1.m4a?download=1" download="栾检2026-4-1.m4a">下载</a>
+        </div>
+        <div class="player-wrap">
+          <audio controls preload="metadata" src="栾检2026-4-1.m4a"></audio>
+        </div>
+      </li>      
+    </ul>
+  </main>
+
+  <script>
+    const items = [...document.querySelectorAll('.audio-item')];
+
+    items.forEach((item) => {
+      const button = item.querySelector('.play');
+      const audio = item.querySelector('audio');
+
+      button.addEventListener('click', async () => {
+        const isPlaying = item.classList.contains('active') && !audio.paused;
+
+        items.forEach((otherItem) => {
+          if (otherItem === item) return;
+          const otherAudio = otherItem.querySelector('audio');
+          const otherButton = otherItem.querySelector('.play');
+          otherAudio.pause();
+          otherItem.classList.remove('active');
+          otherButton.textContent = '播放';
+          otherButton.setAttribute('aria-expanded', 'false');
+        });
+
+        item.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+
+        if (isPlaying) {
+          audio.pause();
+          return;
+        }
+
+        try {
+          await audio.play();
+        } catch {
+          button.textContent = '播放';
+        }
+      });
+
+      audio.addEventListener('play', () => {
+        button.textContent = '暂停';
+      });
+
+      audio.addEventListener('pause', () => {
+        button.textContent = '播放';
+      });
+    });
+  </script>
+</body>
+</html>
